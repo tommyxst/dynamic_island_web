@@ -1,0 +1,126 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+}
+
+.screen {
+  padding: 1.5rem;
+  background-color: white;
+  filter: contrast(10);
+  width: 374px;
+  height: calc(844px - 16px);
+  text-align: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url(./dynamic_hw__btl4fomgspyu_large.png);
+}
+
+.island {
+  width: 104px;
+  display: inline-block;
+  background-color: #000;
+  height: 29px;
+  border-radius: 29px;
+  filter: blur(3px);
+}
+
+.ball {
+  width: 33px;
+  display: inline-block;
+  position: absolute;
+  background-color: #000;
+  opacity: 0;
+  height: 29px;
+  border-radius: 29px;
+  filter: blur(3px);
+}
+
+.longer {
+  animation: long 0.5s ease-in-out forwards;
+}
+
+.ballout {
+  animation: ball-out 0.8s ease-in-out forwards;
+}
+
+.vibration {
+  animation: vibrate 0.5s ease-in-out;
+}
+
+.expansion {
+  animation: expand 0.5s ease-in-out forwards;
+}
+
+@keyframes long {
+  0% {
+  }
+  60% {
+    width: 165px;
+  }
+  80% {
+    transform: scaleX(1.06);
+  }
+  100% {
+    width: 165px;
+    transform: scaleX(1);
+  }
+}
+
+@keyframes ball-out {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  80% {
+    opacity: 1;
+    transform: translateX(8px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(5px);
+  }
+}
+
+@keyframes vibrate {
+  0% {
+    transform: translateX(-3px);
+  }
+  20% {
+    transform: translateX(3px);
+  }
+  40% {
+    transform: translateX(-3px);
+  }
+  60% {
+    transform: translateX(3px);
+  }
+  80% {
+    transform: translateX(-3px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes expand {
+  0% {
+  }
+  60% {
+    width: 290px;
+    height: 50px;
+    border-radius: 50px;
+  }
+  80% {
+    transform: scale(1.06);
+  }
+  100% {
+    width: 290px;
+    height: 50px;
+    border-radius: 50px;
+    transform: scale(1);
+  }
+}

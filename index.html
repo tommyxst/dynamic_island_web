@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Home</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <!--
+      Need a visual blank slate?
+      Remove all code in `styles.css`!
+    -->
+    <link rel="stylesheet" href="dynamic.css" />
+
+  </head>
+  <body>
+    <script>
+      const addAnimation = function(domName, action) {
+        const actDom = document.querySelector('.' + domName)
+        actDom.classList.toggle(action)
+      }      
+    </script>
+    <div class="screen">
+      <div class="island"></div>
+      <div class="ball"></div>
+    </div>
+    <div class="button-area">
+      <button onclick="addAnimation('island', 'longer')">Long</button>
+      <button onclick="addAnimation('ball', 'ballout')">Ball Out</button>
+      <button onclick="addAnimation('island', 'vibration')">Vibrate</button>
+      <button onclick="addAnimation('island', 'expansion')">Expand</button>
+    </div>
+  </body>
+</html>
